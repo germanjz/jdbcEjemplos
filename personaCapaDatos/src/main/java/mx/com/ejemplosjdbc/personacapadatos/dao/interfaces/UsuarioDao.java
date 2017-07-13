@@ -3,50 +3,49 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-package mx.com.ejemplosjdbc.personacapadatos.dao;
+package mx.com.ejemplosjdbc.personacapadatos.dao.interfaces;
 
 import java.sql.SQLException;
 import java.util.List;
-import mx.com.ejemplosjdbc.personacapadatos.dto.PersonaDTO;
+import mx.com.ejemplosjdbc.personacapadatos.dto.UsuarioDTO;
 
 /**
  *
- * @author German Juarez
+ * @author usuario
  */
-public interface PersonaDao {
+public interface UsuarioDao {
 	/**
 	 * Sentencia insert
-	 * @param persona
+	 * @param usuario
 	 * @return 
 	 * @throws SQLException 
 	 */
-	public int insert(PersonaDTO persona) throws SQLException;
+	public int insert(UsuarioDTO usuario) throws SQLException;
 	/**
 	 * Sentencia update
-	 * @param persona
+	 * @param usuario
 	 * @return 
 	 * @throws SQLException 
 	 */
-	public int update(PersonaDTO persona) throws SQLException;
+	public int update(UsuarioDTO usuario) throws SQLException;
 	/**
 	 * Semtencia delete
-	 * @param persona
+	 * @param usuario
 	 * @return 
 	 * @throws SQLException 
 	 */
-	public int delete(PersonaDTO persona) throws SQLException;
+	public int delete(UsuarioDTO usuario) throws SQLException;
 	/**
 	 * Sentencia Select
 	 * @return 
 	 * @throws SQLException 
 	 */
-	public List<PersonaDTO> select() throws SQLException;
+	public List<UsuarioDTO> select() throws SQLException;
 	/**
 	 * 
-	 * @param idPersona
+	 * @param idUsuario
 	 * @return
 	 * @throws SQLException 
 	 */
-	public PersonaDTO select(int idPersona) throws SQLException;
+	public UsuarioDTO select(int idUsuario) throws SQLException;
 }

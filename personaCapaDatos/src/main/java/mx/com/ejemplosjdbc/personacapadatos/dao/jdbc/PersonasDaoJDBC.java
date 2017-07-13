@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package mx.com.ejemplosjdbc.personacapadatos.dao;
+package mx.com.ejemplosjdbc.personacapadatos.dao.jdbc;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import mx.com.ejemplosjdbc.personacapadatos.dao.interfaces.PersonaDao;
 import mx.com.ejemplosjdbc.personacapadatos.dto.PersonaDTO;
 import mx.com.ejemplosjdbc.personacapadatos.jdbc.Conexion;
 
@@ -59,6 +60,7 @@ public class PersonasDaoJDBC implements PersonaDao {
 
 			return rows;
 		} catch (SQLException e) {
+			e.printStackTrace();
 			throw new SQLException();
 		} finally {
 			Conexion.closePreparedStatement(stmt);
@@ -84,6 +86,7 @@ public class PersonasDaoJDBC implements PersonaDao {
 
 			return rows;
 		} catch (SQLException e) {
+			e.printStackTrace();
 			throw new SQLException();
 		} finally {
 			Conexion.closePreparedStatement(stmt);
@@ -106,6 +109,7 @@ public class PersonasDaoJDBC implements PersonaDao {
 
 			return rows;
 		} catch (SQLException e) {
+			e.printStackTrace();
 			throw new SQLException();
 		} finally {
 			Conexion.closePreparedStatement(stmt);
@@ -140,7 +144,8 @@ public class PersonasDaoJDBC implements PersonaDao {
 			}
 
 			return personas;
-		} catch (SQLException e) {			
+		} catch (SQLException e) {
+			e.printStackTrace();
 			throw new SQLException();
 		} finally {
 			Conexion.closeResultSet(rs);
@@ -176,7 +181,8 @@ public class PersonasDaoJDBC implements PersonaDao {
 			}
 
 			return personaDTO;
-		} catch (SQLException e) {			
+		} catch (SQLException e) {
+			e.printStackTrace();
 			throw new SQLException();
 		} finally {
 			Conexion.closeResultSet(rs);
