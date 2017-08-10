@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package mx.com.ejemplosjdbc.callablestatementfunciones.dao.impl;
 
 import java.sql.CallableStatement;
@@ -12,10 +6,9 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+
 import mx.com.ejemplosjdbc.callablestatementfunciones.dao.interfaces.EmpleadoDao;
 import mx.com.ejemplosjdbc.callablestatementfunciones.datos.Conexion;
-import oracle.jdbc.OracleCallableStatement;
-import oracle.jdbc.OracleResultSet;
 import oracle.jdbc.OracleTypes;
 
 /**

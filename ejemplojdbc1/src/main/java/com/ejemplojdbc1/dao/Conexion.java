@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.ejemplojdbc1.dao;
 
 import java.sql.Connection;
@@ -15,7 +10,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author usuario
+ * @author German Juarez
  */
 public class Conexion {
 	private static String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -24,6 +19,7 @@ public class Conexion {
 	private static String JDBC_PASS = "userAdmin";
 	private static Driver driver = null;
 
+	@SuppressWarnings("rawtypes")
 	public static synchronized Connection getConnection() throws SQLException {
 		if (driver == null) {
 			try {

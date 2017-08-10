@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package mx.com.ejemplosjdbc.callablestatementfunciones.datos;
 
 import java.sql.CallableStatement;
@@ -12,7 +6,6 @@ import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Enumeration;
@@ -40,7 +33,8 @@ public class Conexion {
      * @param file
      * @return
      */
-    public static Properties loadProperties(String file) {
+    @SuppressWarnings("rawtypes")
+	public static Properties loadProperties(String file) {
         Properties prop = new Properties();
         ResourceBundle bundle = ResourceBundle.getBundle(file);
         Enumeration e = bundle.getKeys();
@@ -68,7 +62,8 @@ public class Conexion {
 	 * @return
 	 * @throws SQLException 
 	 */
-    public static synchronized Connection getConnection() throws SQLException {
+    @SuppressWarnings("rawtypes")
+	public static synchronized Connection getConnection() throws SQLException {
         if (driver == null) {
             try {
                 //Cargamos las propiedades de conexion a la BD

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package mx.com.ejemplosjdbc.personacapadatos.jdbc;
 
 import java.sql.Connection;
@@ -25,6 +19,7 @@ public class Conexion {
 	private static String JDBC_PASS = "userAdmin";
 	private static Driver driver = null;
 
+	@SuppressWarnings("rawtypes")
 	public static synchronized Connection getConnection() throws SQLException {
 		if (driver == null) {
 			try {
